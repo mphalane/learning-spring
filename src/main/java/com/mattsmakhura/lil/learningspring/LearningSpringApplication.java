@@ -6,6 +6,7 @@ import com.mattsmakhura.lil.learningspring.data.entity.Room;
 import com.mattsmakhura.lil.learningspring.data.repository.GuestRepository;
 import com.mattsmakhura.lil.learningspring.data.repository.ReservationRepository;
 import com.mattsmakhura.lil.learningspring.data.repository.RoomRepository;
+import com.mattsmakhura.lil.learningspring.web.RoomReservationWebController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -17,12 +18,14 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+@SpringBootApplication
 @Configuration
 @ComponentScan(basePackages = {"com.mattsmakhura.lil.learningspring.data"})
+@ComponentScan(basePackageClasses = RoomReservationWebController.class)
 @EnableAutoConfiguration
 @EntityScan("com.mattsmakhura.lil.learningspring.data.entity")
 @EnableJpaRepositories("com.mattsmakhura.lil.learningspring.data.repository")
-@SpringBootApplication
 public class LearningSpringApplication {
 
 	public static void main(String[] args) {
