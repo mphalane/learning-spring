@@ -1,6 +1,11 @@
 package com.mattsmakhura.lil.learningspring.data.entity;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 /* Step 2 : We make this a entity because its an entity - we are trying to
 replicate the SCHEMA for ROOM table but in a form of a class that can communicate with the repository layer

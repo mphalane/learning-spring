@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 @Configuration
-@ComponentScan(basePackages = {"com.mattsmakhura.lil.learningspring.data"})
+@ComponentScan(basePackages = {"com.mattsmakhura.lil.learningspring.data.repository"})
 @ComponentScan(basePackageClasses = RoomReservationWebController.class)
 @EnableAutoConfiguration
 @EntityScan("com.mattsmakhura.lil.learningspring.data.entity")
